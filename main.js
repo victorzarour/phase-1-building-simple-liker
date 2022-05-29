@@ -4,8 +4,15 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+const divMo = document.querySelector("#modal")
+divMo.className = "hidden"
 
-
+const likes = document.getElementsByClassName("like-glyph")
+for (const like of likes) {
+  like.addEventListener("click", e => {
+    mimicServerCall()
+  })
+}
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
